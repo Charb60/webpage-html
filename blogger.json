@@ -1,0 +1,43 @@
+[
+{"type":"header","version":"5.1.2","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"blogger"},
+{"type":"table","name":"about_me","database":"blogger","data":
+[
+{"id":"1","title":"เกี่ยวกับฉัน","subtitle":"นันทพงศ์ คงยุทธ์","content":"ประวัติการศึกษาปริญญาตรี - ปีที่สําเร็จการศึกษา 2563 มหาวิทยาลัยนเรศวร คณะวิทยาศาสตร์สาขาเทคโนโลยีสารสนเทศ เกรดเฉลี่ย 2.95\r\n\r\nภาษาทางคอมพิวเตอร์\r\nHTML    ,SQL \r\nCSS      ,C#\r\nJava      ,Javascript \r\nDart Flutter ,Python\r\nPHP \r\nเครื่องมือแอปพลิเคชัน\r\nVScode ,GitHub\r\nAndroid Studio\r\nUnity engine \r\njetbrains , microsoft office\r\nPhotoshop ,illustrator\r\nPremiere pro ,Blender\r\nPostman","image_url":"https:\/\/avatars.githubusercontent.com\/u\/78400746?v=4","updated_at":"2026-05-27 15:26:21"}
+]
+}
+,{"type":"table","name":"admin","database":"blogger","data":
+[
+{"id":"5","username":"admin","password":"$2a$12$6PLptJeuFhhfrRJA66Q8K.qKz1MSWcShHVkN6Y5ulPR8lDzUfbLLS","name":"nanthaphong","created_at":"2026-05-27 11:33:15","updated_at":"2026-05-27 11:39:22"}
+]
+}
+,{"type":"table","name":"contacts","database":"blogger","data":
+[
+]
+}
+,{"type":"table","name":"posts","database":"blogger","data":
+[
+
+]
+}
+,{"type":"table","name":"post_tag","database":"blogger","data":
+[
+
+]
+}
+,{"type":"table","name":"projects","database":"blogger","data":
+[
+{"id":"1","title":"Book lending System","description":"ระบบยืมคืนหนังสือ Book lending System \r\nบริการคืนหนังสือระบบยืมหนังสือ พัฒนาระบบการให้ยืมและคืน Window Application โดยใช้ Python,NodeJs \r\nฐานข้อมูล MySQL","technologies":"python ,NodeJs ,ฐานข้อมูล MySQL","image_url":"6a16a0e6c7b1f.jpg","project_url":"https:\/\/github.com\/Charb60\/BookLendingSystem","github_url":null,"demo_url":null,"status":"active","created_at":"2026-05-27 14:44:38","updated_at":"2026-05-27 14:44:38"},
+{"id":"2","title":"Computer Shop","description":"พัฒนาเว็บไซต์ร้านขายคอมพิวเตอร์\r\nโดยใช้ PHP ฐานข้อมูล MySQL","technologies":"python ,css ,ฐานข้อมูล MySQL","image_url":"6a16a22f7ccde.jpg","project_url":"https:\/\/github.com\/Charb60\/comshop","github_url":null,"demo_url":null,"status":"active","created_at":"2026-05-27 14:50:07","updated_at":"2026-05-27 14:50:07"},
+{"id":"3","title":"Augmented Reality for Human Body Learning","description":"พัฒนาแอปพลิเคชันมือถือ AR โดยใช้ Android Studio, \r\nUnity engine, Blender และ Vuforia engine. ,C++","technologies":"Android Studio, Unity engine, Blender และ Vuforia engine, C++","image_url":"6a16a37b489c2.jpg","project_url":"","github_url":null,"demo_url":null,"status":"active","created_at":"2026-05-27 14:55:39","updated_at":"2026-05-27 14:55:39"},
+{"id":"4","title":"puzzle Game","description":"พัฒนาเกมเรียงตัวเลข 15-Puzzle","technologies":"dart flutter","image_url":"6a16a6c806da6.png","project_url":"https:\/\/github.com\/Charb60\/puzzleGame\/tree\/main\/puzzlegamedemo","github_url":null,"demo_url":null,"status":"active","created_at":"2026-05-27 15:09:44","updated_at":"2026-05-27 15:09:44"},
+{"id":"5","title":"House seller","description":"Frontend พัฒนาแอปพลิเคชันบนมือถือโดยใช้ Dart และ Flutter\r\nBackend ใช้ Java Springboot Restfull API และบริการ Firebase ฐานข้อมูล MySQL","technologies":"dart flutter,Java","image_url":"6a16a73b5cce4.jpg","project_url":"https:\/\/github.com\/Charb60\/HCAdemoapp","github_url":null,"demo_url":null,"status":"active","created_at":"2026-05-27 15:11:39","updated_at":"2026-05-27 15:11:39"},
+{"id":"6","title":"เว็บไซต์จองที่พักโรงแรม Hotel-project","description":"พัฒนาเว็บแอปพลิเคชันสำหรับจองห้องพักโรงแรม\r\nโดยใช้ Vue.js ร่วมกับ Node.js ฐานข้อมูล MySQL\r\nรับผิดชอบ (frontend)","technologies":"Vue.js, node.js","image_url":"6a16a97167eff.jpg","project_url":"https:\/\/github.com\/Charb60\/Hotel-project","github_url":null,"demo_url":null,"status":"active","created_at":"2026-05-27 15:21:05","updated_at":"2026-05-27 15:21:05"}
+]
+}
+,{"type":"table","name":"tags","database":"blogger","data":
+[
+
+]
+}
+]

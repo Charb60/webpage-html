@@ -1,0 +1,201 @@
+/* ==========================================================================
+   1. Design Tokens & Variables (สัดส่วนสีตาม Palette: 4a4466, 6eadbc, 9fcbad, f1f7d4)
+   ========================================================================== */
+:root {
+    /* [60%] สีหลักของพื้นที่ใหญ่ - ใช้สีเหลืองพาสเทลนวล สบายตา นุ่มนวลมาก */
+    --bg-body: #F1F7D4;          
+    
+    /* [30%-40%] สีรอง โครงสร้าง การ์ด ส่วนหัวและส่วนท้าย */
+    --bg-card: #ffffff;          /* สีขาวบริสุทธิ์สำหรับการ์ดเพื่อให้ฟอร์มและบทความเด่นชัด */
+    --bg-header-footer: #9FCBAD; /* สีเขียวมิ้นต์ตุ่น ให้ความรู้สึกผ่อนคลายและพรีเมียม */
+    --border-color: #6EADBC;     /* สีฟ้าพาสเทลเข้ม ใช้สำหรับตัดขอบและเส้นโฟกัส */
+    
+    /* [10%] สีเน้น (Accent) - จุดดึงสายตา, ปุ่ม Action และหัวข้อหลัก */
+    --accent-color: #4A4466;     /* สีม่วงเข้มโทนหรูหรา ใช้กับปุ่ม โลโก้ และหัวข้อสำคัญ */
+    --accent-hover: #36314D;     /* สีม่วงเฉดที่เข้มขึ้นอีกระดับสำหรับสถานะ Hover */
+    
+    /* สีตัวอักษรเพื่อความสมดุล (Contrast) */
+    --text-main: #333333;        /* สีเทาเข้มเกือบดำเพื่อให้อ่านเนื้อหาได้ง่าย ไม่ล้าสายตา */
+    --text-muted: #5A6E79;       /* สีตัวอักษรรอง สำหรับวันที่หรือรายละเอียดเล็กๆ */
+    --text-light: #ffffff;       /* สีตัวอักษรสีขาวบนพื้นหลังเฉดเข้ม */
+    
+    --shadow: 0 8px 24px rgba(74, 68, 102, 0.12); /* เงาสมูทนุ่มนวลอมโทนม่วงจางๆ */
+}
+
+/* ==========================================================================
+   2. General Styles 
+   ========================================================================== */
+body {
+    font-family: 'Prompt', 'Sarabun', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.7;
+    color: var(--text-main);
+    background-color: var(--bg-body);
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   3. Layout Components
+   ========================================================================== */
+
+/* Header (ใช้สีรอง #9FCBAD) */
+header {
+    background: var(--bg-header-footer);
+    color: var(--accent-color); /* ใช้ตัวอักษรสีม่วงเข้มตัดกับพื้นเขียวมิ้นต์ได้อย่างลงตัว */
+    padding: 1.2rem 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--accent-color); /* เน้นโลโก้ด้วยสีม่วงเข้มดึงสายตา */
+    text-decoration: none;
+}
+
+header .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1.5rem;
+}
+
+header .menu li a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+    opacity: 0.85;
+    transition: all 0.2s;
+}
+
+header .menu li a:hover {
+    opacity: 1;
+    color: var(--text-light); /* เวลาเอาเมาส์ชี้ เมนูจะเปลี่ยนเป็นสีขาวเด่นขึ้นมา */
+}
+
+/* index Section (ใช้สีเน้น #4A4466 เพื่อสร้างความประทับใจแรกที่เด่นชัด) */
+.index {
+    background: var(--accent-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.index h1 {
+    margin: 0;
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+.index p {
+    margin: 1rem 0 0;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Main Content & Cards (วางอยู่บนพื้นหลังสีเหลืองพาสเทลนวล #F1F7D4) */
+main {
+    padding: 3rem 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+article {
+    background: var(--bg-card);
+    border: 1px solid rgba(110, 173, 188, 0.3); /* เส้นขอบบางๆ โทนสีฟ้าพาสเทล */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+article:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(74, 68, 102, 0.18); /* เงาจะขยายตัวนุ่มๆ เวลา hover */
+}
+
+article img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+article h2 {
+    margin: 1.25rem 1.25rem 0.5rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--accent-color); /* หัวข้อบทความใช้สีม่วงเข้ม สวยงามและเด่นชัด */
+}
+
+article p {
+    margin: 0 1.25rem 1.25rem;
+    font-size: 0.95rem;
+    color: var(--text-main);
+}
+
+article span {
+    display: block;
+    margin: 0 1.25rem 1.25rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* Footer (ใช้สีรอง #9FCBAD ปิดท้ายเว็บอย่างนุ่มนวลและเป็นธีมเดียวกัน) */
+footer {
+    background: var(--bg-header-footer);
+    color: var(--accent-color);
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 0.9rem;
+}
+
+footer .social {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+footer .social li a {
+    color: var(--accent-color);
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+footer .social li a:hover {
+    color: var(--text-light);
+    opacity: 1;
+}
+        html {
+            scroll-behavior: smooth;
+        }
+        /* ดักไม่ให้เมนูด้านบนบังหัวข้อเวลาเลื่อนลงมา (ปรับตัวเลขตามความสูงของเมนูคุณ) */
+        section, main, footer {
+            scroll-margin-top: 60px; 
+        }
+        /* ตกแต่งส่วนที่เพิ่มขึ้นมาใหม่ให้ดูเป็นสัดส่วน (ลบหรือแก้ไขตามใจชอบใน style.css ได้เลย) */
+        .portfolio-section, .contact-section {
+            padding: 60px 0;
+            text-align: center;
+        }
+        .portfolio-section { background-color: #f9f9f9; }
+        .contact-section { background-color: #ffffff; border-top: 1px solid #eee; }
